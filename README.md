@@ -1,3 +1,5 @@
+****Statements created in GCP from uploaded CSV, retrieved from Kaggle.
+
 **Total Sales by Region**
 
 SQL Query: Calculate the total sales in different regions (North America, Europe, Japan, and other regions) and provide the overall global sales.
