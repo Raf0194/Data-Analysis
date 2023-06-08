@@ -1,3 +1,5 @@
+Statements created in GCP from uploaded CSV retrieved from Kaggle.
+
 SELECT
     *
 FROM
