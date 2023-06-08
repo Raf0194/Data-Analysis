@@ -1,0 +1,115 @@
+SELECT
+    *
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales`;
+
+SELECT 
+    ROUND(SUM(na_sales),0) AS total_na_sales,
+    ROUND(SUM(eu_sales),0) AS total_eu_sales,
+    ROUND(SUM(jp_sales),0) AS total_jp_sales,
+   ROUND(SUM(other_sales),0) AS total_other_sales,
+    ROUND(SUM(global_sales),0) AS total_global_sales
+FROM 
+    `dataproject04.Video_Game_sales.VG_Sales`;
+--Total sales by region
+
+SELECT
+    genre,
+    Round(SUM(global_sales),0) AS total_sales
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales`
+GROUP BY 
+    genre
+ORDER BY
+    total_sales DESC;
+-- This shows total global sales by genre
+
+SELECT 
+    platform,
+    year,
+    ROUND(SUM(global_sales),0) AS total_global_sales
+FROM 
+    `dataproject04.Video_Game_sales.VG_Sales`
+WHERE
+    year IS NOT NULL
+GROUP BY 
+    platform, year
+ORDER BY 
+    year, platform;
+-- Global platform sales by year, filtering out null years
+
+SELECT
+    publisher,
+    ROUND(SUM(na_sales),0) AS total_na_sales
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales`
+GROUP BY
+    publisher
+ORDER BY
+    total_na_sales DESC;
+--Total North American sales by publisher
+
+SELECT 
+    publisher,
+    ROUND(SUM(global_sales),0) AS total_global_sales
+FROM 
+    `dataproject04.Video_Game_sales.VG_Sales`
+GROUP BY 
+    publisher
+ORDER BY 
+    total_global_sales DESC
+LIMIT 10;
+--Top publisher by global sales
+
+SELECT
+    publisher,
+    COUNT(DISTINCT name) AS no_games,
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales`
+GROUP BY
+    publisher;
+--total number of games a publisher has published
+
+SELECT
+    platform,
+    ROUND(SUM(global_sales),0) AS total_sales
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales`
+GROUP BY
+    platform
+ORDER BY
+    total_sales DESC
+LIMIT 1;
+--Platform that has the most sales
+
+SELECT
+    p1.publisher,
+    COUNT(DISTINCT p1.genre) AS num_genres
+FROM
+    `dataproject04.Video_Game_sales.VG_Sales` p1
+JOIN
+    `dataproject04.Video_Game_sales.VG_Sales` p2 ON p1.publisher = p2.publisher
+WHERE
+    p1.genre != p2.genre
+GROUP BY
+    p1.publisher
+HAVING COUNT(DISTINCT p1.genre) > 1
+ORDER BY
+    num_genres DESC;
+--Self join to count the number of distinct titles a publisher has published. We are also removing publishers who have only published titles in a single genre
+--So here we are checking which publishers have published titles in multiple genres, and how many genres
+
+WITH CTE_games AS (
+    SELECT
+        rank,
+        name,
+        global_sales
+    FROM
+        `dataproject04.Video_Game_sales.VG_Sales`
+    ORDER BY
+        rank ASC
+)
+SELECT
+    *
+FROM CTE_games
+--CTE pratice
