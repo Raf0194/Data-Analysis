@@ -1,5 +1,7 @@
 ****Statements created in GCP from uploaded CSV, retrieved from Kaggle.
 
+Tableau Link: https://public.tableau.com/app/profile/raf2825/viz/VGSales_16861913573820/Dashboard1
+
 **Total Sales by Region**
 
 SQL Query: Calculate the total sales in different regions (North America, Europe, Japan, and other regions) and provide the overall global sales.
