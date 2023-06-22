@@ -1,0 +1,31 @@
+Tableau Link: https://public.tableau.com/app/profile/raf2825/viz/MovieDashboard_16874002358550/MovieDashboard
+
+I. Introduction
+  This Tableau data visualization project focuses on TMDB movies. The project aims to analyze and present key insights derived from the dataset.
+  By leveraging Tableau's capabilities, we will explore movie genres, release timelines, popularity scores, vote counts, and average votes.
+  The project aims to provide a visually engaging experience while uncovering trends and patterns in the movie industry.
+
+II. Visualizations
+  A. Tree Map of Genres and Title Count
+  - Show main genres and respective counts in a tree map
+
+B. Movies Over Time Line Chart
+  - Plot movie count over time
+
+C. Movies Sorted Descending by TMDB Popularity Score
+  - List movies sorted by popularity score
+
+D. Top 10 Movies Based on Number of Votes
+  - Bar chart of movies with highest vote counts
+
+E. Top 10 Movies Based on Average Votes
+  - Bar chart of movies with highest average vote scores
+
+I. Findings
+  In conclusion, the Tableau project on TMDB movies has provided valuable insights into the industry.
+  Through visualizations, we explored genres, release timelines, popularity scores, vote counts, and average votes.
+  These findings have enhanced our understanding of the movie industry and demonstrated the power of data visualization in presenting complex information.
+  Overall, the project has successfully conveyed meaningful insights in a visually engaging manner, shedding light on important aspects of movies from TMDB.
+
+
+Source: https://www.kaggle.com/datasets/manashjyotiborah/top-10000-movies-hosted-on-tmdb
