@@ -19,3 +19,6 @@ Result: The query provides a comprehensive view of the sales performance of vari
 
 SQL Query: Identify the top publishers based on their total global sales, showcasing the most successful publishers in terms of sales.
 Result: The query allows insight into the publishers with the highest sales figures, providing an understanding of market dynamics and competitive landscape.
+
+
+Source: https://www.kaggle.com/datasets/gregorut/videogamesales
